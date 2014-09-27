@@ -1,5 +1,4 @@
 {-# LANGUAGE RecursiveDo #-}
-module Pong (main) where
 import FRP.Helm
 import FRP.Elerea.Simple
 import qualified FRP.Helm.Keyboard as Keyboard
@@ -38,7 +37,7 @@ ballSignal = mdo
                         dx = if not (inside newx width) || colliding then
                             (-1) * (dx' + (signum dx') * 0.5)
                         else dx',
-                        dy = if not (inside newx height) then
+                        dy = if not (inside newy height) then
                             (-1) * dy'
                         else dy'
                         }
